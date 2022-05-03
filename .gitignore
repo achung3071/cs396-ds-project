@@ -2,3 +2,4 @@
 data/raw/**.sqlite
 data/preprocessed
 models/**/*.joblib
+**/.DS_Store
