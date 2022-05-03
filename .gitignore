@@ -1,2 +1,4 @@
-data/raw/basketball.sqlite
 .ipynb_checkpoints
+data/raw/**.sqlite
+data/preprocessed
+models/**/*.joblib
