@@ -1,0 +1,352 @@
+{
+    "Linear": {
+        "param_grid": {
+            "model__fit_intercept": [
+                true,
+                false
+            ]
+        },
+        "best_params": {
+            "model__fit_intercept": true
+        },
+        "best_score": -3493245.316840102,
+        "scoring": "neg_mean_absolute_error"
+    },
+    "Ridge": {
+        "param_grid": {
+            "model__fit_intercept": [
+                true,
+                false
+            ],
+            "model__alpha": [
+                1e-10,
+                1e-08,
+                1e-05,
+                0.0001,
+                0.001,
+                0.01,
+                1
+            ]
+        },
+        "best_params": {
+            "model__alpha": 1,
+            "model__fit_intercept": true
+        },
+        "best_score": -3498353.0052354885,
+        "scoring": "neg_mean_absolute_error"
+    },
+    "Lasso": {
+        "param_grid": {
+            "model__fit_intercept": [
+                true,
+                false
+            ],
+            "model__alpha": [
+                1e-10,
+                1e-08,
+                1e-05,
+                0.0001,
+                0.001,
+                0.01,
+                1
+            ],
+            "model__precompute": [
+                true,
+                false
+            ],
+            "model__selection": [
+                "cyclic",
+                "random"
+            ]
+        },
+        "best_params": {
+            "model__alpha": 1e-10,
+            "model__fit_intercept": false,
+            "model__precompute": false,
+            "model__selection": "random"
+        },
+        "best_score": -3498916.8864122382,
+        "scoring": "neg_mean_absolute_error"
+    },
+    "KNN": {
+        "param_grid": {
+            "model__n_neighbors": [
+                4,
+                6,
+                8,
+                10,
+                15,
+                20
+            ],
+            "model__leaf_size": [
+                20,
+                22,
+                24,
+                26,
+                28,
+                30,
+                32,
+                34,
+                36,
+                38
+            ],
+            "model__p": [
+                1,
+                2
+            ],
+            "model__weights": [
+                "uniform",
+                "distance"
+            ],
+            "model__metric": [
+                "minkowski",
+                "chebyshev"
+            ]
+        },
+        "best_params": {
+            "model__leaf_size": 32,
+            "model__metric": "minkowski",
+            "model__n_neighbors": 10,
+            "model__p": 1,
+            "model__weights": "distance"
+        },
+        "best_score": -3259110.323586311,
+        "scoring": "neg_mean_absolute_error"
+    },
+    "SGD": {
+        "param_grid": {
+            "model__fit_intercept": [
+                true,
+                false
+            ],
+            "model__loss": [
+                "squared_error",
+                "huber"
+            ],
+            "model__penalty": [
+                "l1",
+                "l2"
+            ],
+            "model__alpha": [
+                1e-10,
+                1e-08,
+                1e-05,
+                0.0001,
+                0.001,
+                0.01,
+                1
+            ],
+            "model__learning_rate": [
+                "optimal",
+                "invscaling",
+                "adaptive"
+            ],
+            "model__shuffle": [
+                true,
+                false
+            ],
+            "model__average": [
+                true,
+                false
+            ],
+            "model__max_iter": [
+                1000,
+                5000,
+                15000
+            ]
+        },
+        "best_params": {
+            "model__alpha": 1e-10,
+            "model__average": false,
+            "model__fit_intercept": true,
+            "model__learning_rate": "optimal",
+            "model__loss": "huber",
+            "model__max_iter": 5000,
+            "model__penalty": "l1",
+            "model__shuffle": false
+        },
+        "best_score": -3319285.6881964905,
+        "scoring": "neg_mean_absolute_error"
+    },
+    "SVR": {
+        "param_grid": {
+            "model__epsilon": [
+                0,
+                0.1,
+                0.2,
+                0.3,
+                0.5
+            ],
+            "model__intercept_scaling": [
+                0.5,
+                1,
+                2,
+                3,
+                5
+            ],
+            "model__fit_intercept": [
+                true,
+                false
+            ],
+            "model__C": [
+                0.1,
+                0.5,
+                1,
+                5,
+                10
+            ]
+        },
+        "best_params": {
+            "model__C": 10,
+            "model__epsilon": 0.2,
+            "model__fit_intercept": true,
+            "model__intercept_scaling": 5
+        },
+        "best_score": -5095782.134195416,
+        "scoring": "neg_mean_absolute_error"
+    },
+    "RF": {
+        "param_grid": {
+            "model__bootstrap": [
+                true,
+                false
+            ],
+            "model__max_depth": [
+                10,
+                50,
+                100,
+                null
+            ],
+            "model__max_features": [
+                "auto",
+                "sqrt"
+            ],
+            "model__min_samples_leaf": [
+                1,
+                2,
+                4
+            ],
+            "model__min_samples_split": [
+                2,
+                5,
+                10
+            ],
+            "model__n_estimators": [
+                10,
+                50,
+                100,
+                200,
+                400,
+                600
+            ]
+        },
+        "best_params": {
+            "model__bootstrap": true,
+            "model__max_depth": null,
+            "model__max_features": "auto",
+            "model__min_samples_leaf": 2,
+            "model__min_samples_split": 2,
+            "model__n_estimators": 600
+        },
+        "best_score": -3306382.651721019,
+        "scoring": "neg_mean_absolute_error"
+    },
+    "AB": {
+        "param_grid": {
+            "model__base_estimator": [
+                "DecisionTree(max_depth=3)",
+                "DecisionTree(max_depth=10)",
+                "DecisionTree(max_depth=100)",
+                "DecisionTree(max_depth=None)"
+            ],
+            "model__learning_rate": [
+                0.01,
+                0.1,
+                0.2,
+                0.3,
+                0.5,
+                0.8,
+                1,
+                1.5,
+                2
+            ],
+            "model__loss": [
+                "linear",
+                "square"
+            ],
+            "model__n_estimators": [
+                10,
+                50,
+                100,
+                200,
+                400,
+                600
+            ]
+        },
+        "best_params": {
+            "model__base_estimator": "DecisionTree(max_depth=100)",
+            "model__learning_rate": 1,
+            "model__loss": "square",
+            "model__n_estimators": 600
+        },
+        "best_score": -2971072.4307372374,
+        "scoring": "neg_mean_absolute_error"
+    },
+    "GB": {
+        "param_grid": {
+            "model__loss": [
+                "squared_error",
+                "absolute_error"
+            ],
+            "model__learning_rate": [
+                0.0001,
+                0.001,
+                0.01,
+                0.1,
+                0.2,
+                0.3,
+                0.5,
+                1
+            ],
+            "model__max_depth": [
+                10,
+                50,
+                100,
+                null
+            ],
+            "model__max_features": [
+                "auto",
+                "sqrt"
+            ],
+            "model__min_samples_leaf": [
+                1,
+                2,
+                4
+            ],
+            "model__min_samples_split": [
+                2,
+                5,
+                10
+            ],
+            "model__n_estimators": [
+                10,
+                50,
+                100,
+                200,
+                400,
+                600
+            ]
+        },
+        "best_params": {
+            "model__learning_rate": 0.01,
+            "model__loss": "absolute_error",
+            "model__max_depth": 10,
+            "model__max_features": "sqrt",
+            "model__min_samples_leaf": 2,
+            "model__min_samples_split": 10,
+            "model__n_estimators": 600
+        },
+        "best_score": -3169396.73019695,
+        "scoring": "neg_mean_absolute_error"
+    }
+}

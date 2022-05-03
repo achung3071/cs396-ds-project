@@ -1,1 +1,3 @@
-data/raw/basketball.sqlite
+data/raw/**.sqlite
+data/preprocessed
+models/**/*.joblib
