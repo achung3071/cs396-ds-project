@@ -1,5 +1,6 @@
 .ipynb_checkpoints
 data/raw/**.sqlite
 data/preprocessed
+data/clean
 models/**/*.joblib
 **/.DS_Store
